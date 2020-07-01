@@ -1,3 +1,6 @@
+# pour faire des tests vous n'avez pas besoin de télécharger le code aller directement sur :
+https://mamadouniang.github.io/simed02/
+
 # BlockchainPoll
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.

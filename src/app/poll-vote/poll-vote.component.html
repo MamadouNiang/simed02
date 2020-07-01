@@ -1,0 +1,13 @@
+<h3>{{questions}}</h3>
+
+<form *ngIf="!voted" [formGroup]="voteForm" (ngSubmit)="submitForm()">
+    <div class="form-check" *ngFor=" let opt of options; let i = index">
+        <input type="radio" formControlName="selected" [value]="i" class="form-check-input" />
+        <label class="form-check-label">{{opt}}</label>
+    </div>
+    <button type="submit" class="btn btn-success mt-3" [disabled]="!voteForm.valid">
+valider
+    </button></form>
+<div *ngIf="voted" id="poll-results">
+
+</div>

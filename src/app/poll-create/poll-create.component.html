@@ -1,0 +1,42 @@
+<form [formGroup]="pollForm" (ngSubmit)="submitForm()" class="container " style="background-color: lavender;margin-top: 7%;">
+    <div class="form-group  ">
+        <label class="col-sm-6 col-form-label col-form-label-sm">
+          Nom et Prenom :
+        </label>
+        <div class="col-sm-12">
+            <input formControlName="question" type="text" class="form-control form-cotrol-sm" placeholder="Nom et Prenom complet du patient">
+        </div>
+    </div>
+    <div class="form-group  ">
+        <label class="col-sm-4 col-form-label col-form-label-sm">
+        Image:
+      </label>
+        <div class="col-sm-12">
+            <input type="text" formControlName="image" class="form-control form-cotrol-sm" placeholder="Images ou Scanncer URL ">
+        </div>
+    </div>
+    <div class="form-group  ">
+        <label class="col-sm-4 col-form-label col-form-label-sm">
+        Symptomes:
+      </label>
+        <div class="col-sm-12">
+            <input formControlName="op1" type="text" class="form-control form-cotrol-sm" placeholder="symptome 1">
+        </div>
+    </div>
+    <div class="form-group  ">
+        <div class="col-sm-12">
+            <input formControlName="op2" type="text" class="form-control form-cotrol-sm" placeholder="symptome 2">
+        </div>
+    </div>
+    <div class=" form-group   ">
+
+        <div class="col-sm-12 ">
+            <input type="text " formControlName="op3" class="form-control form-cotrol-sm " placeholder="symptome 3 ">
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center text-center ">
+        <button type="submit " class="btn btn-sm btn-success ">Lancer la Transaction</button>
+    </div>
+
+</form>

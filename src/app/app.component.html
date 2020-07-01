@@ -1,0 +1,35 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand mr-auto" href="#"><strong>Ethereum Blockchain & SiMed</strong> </a>
+    <button (click)="showForm =!showForm " type="button" class="btn btn-secondary">Ajout Nouveau Dossier Médical</button>
+</nav>
+<div class="row">
+    <div class="col-lg-8 col-md-6 ml-auto mr-auto">
+        <section class="jumbotron bg-light text-center">
+            <img src="../assets/img/2.png" style="height: 250px; width: 60%;margin-top:-5%;">
+            <h1>Service de Cardiologie du CHNU Fann</h1>
+            <p class="load text-muted">
+                SiMed & <strong>Ethereum - Blockchain</strong>
+            </p>
+
+        </section>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <app-poll-create (pollCreate)="handlePollCreate($event)" *ngIf="showForm"></app-poll-create>
+    </div>
+</div>
+
+
+
+
+<div class="d-flex">
+
+    <div class="container poll-list">
+        <app-poll (click)="setActivePoll(poll)" *ngFor="let poll of polls | async" [pollImage]="poll.thumbnail" [question]="poll.question" [voted]="poll.voted" [votes]="poll.results"></app-poll>
+    </div>
+
+    <div class="container poll-detail">
+        <app-poll-vote *ngIf="ActivePoll" (pollVoted)="handlePollVote($event)" [id]="ActivePoll.id" [results]="ActivePoll.results" [voted]="ActivePoll.voted" [questions]="ActivePoll.question" [options]="ActivePoll.options">
+
+        </app-poll-vote>
+    </div>
+</div>

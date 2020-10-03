@@ -1,3 +1,5 @@
+# Ainsi les blockchain peuvent permettre d’améliorer les soins de santé en plaçant le patient au centre du système de santé et en augmentant la sécurité.
+
 # pour faire des tests vous n'avez pas besoin de télécharger le code aller directement sur :
 https://mamadouniang.github.io/simed02/
 
